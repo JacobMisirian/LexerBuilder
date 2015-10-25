@@ -1,0 +1,6 @@
+c:\users\reagan\documents\visual studio 2015\Projects\LexerBuilder\LexerBuilder\bin\Debug\LexerBuilder.exe.config
+c:\users\reagan\documents\visual studio 2015\Projects\LexerBuilder\LexerBuilder\obj\Debug\LexerBuilder.csprojResolveAssemblyReference.cache
+c:\users\reagan\documents\visual studio 2015\Projects\LexerBuilder\LexerBuilder\bin\Debug\LexerBuilder.exe
+c:\users\reagan\documents\visual studio 2015\Projects\LexerBuilder\LexerBuilder\bin\Debug\LexerBuilder.pdb
+c:\users\reagan\documents\visual studio 2015\Projects\LexerBuilder\LexerBuilder\obj\Debug\LexerBuilder.exe
+c:\users\reagan\documents\visual studio 2015\Projects\LexerBuilder\LexerBuilder\obj\Debug\LexerBuilder.pdb
