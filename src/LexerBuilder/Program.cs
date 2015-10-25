@@ -12,14 +12,14 @@ namespace LexerBuilder
         static void Main(string[] args)
         {
             string code = "println(\"Hello, World!\");";
-            Lexer myLexer = new Lexer(code);
+            Lexer myLexer = new Lexer();
 
             myLexer.SetBinding(";", TokenType.SemiColon);
             myLexer.SetBinding("(", TokenType.RightParentheses);
             myLexer.SetBinding(")", TokenType.LeftParentheses);
             myLexer.ScanFrom("\"", "\"", TokenType.String);
 
-            foreach (Token token in myLexer.Scan())
+            foreach (Token token in myLexer.Scan(code))
                 Console.WriteLine(token.TokenType + "\t" + token.Value);
 
             Console.Read();
