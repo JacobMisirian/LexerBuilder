@@ -40,7 +40,8 @@ IgnoreChar configures the lexer to simply skip over all instances of a char in t
 Example: 
 ```
 lexer.IgnoreChar(";");
-``` causes the lexer to ignore all semi-colons in the code.
+``` 
+causes the lexer to ignore all semi-colons in the code.
 
 IgnoreFrom configures the lexer to skip over everything between (and including) the to and from
 letters. Example: 
