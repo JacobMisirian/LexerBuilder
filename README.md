@@ -50,3 +50,14 @@ lexer.IgnoreFrom("$", "#")
 ``` 
 will cause the lexer to skip over everything
 between $ and #.
+
+When your lexer is configured and you are ready to actually scan the source code, run:
+```
+List<Token> tokens = lexer.Scan(stringWithMySourceCode);
+```
+
+To view the tokens that your lexer scanned use the following code:
+```
+foreach (Token token in tokens)
+	Console.WriteLine(token.TokenType + "\t" + token.Value);
+```
