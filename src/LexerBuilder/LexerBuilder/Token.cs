@@ -43,7 +43,9 @@ namespace LexerBuilder.LexerBuilder
         Else,
         Then,
         Label,
-        Goto
+        Goto,
+        Increment,
+        Decrement
     }
     public class Token
     {

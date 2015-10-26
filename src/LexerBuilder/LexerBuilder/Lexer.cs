@@ -36,7 +36,19 @@ namespace LexerBuilder.LexerBuilder
 
             while (peekChar() != -1)
             {
-                if (char.IsLetterOrDigit(peekLetter))
+                var listing = contains(bindings, peekLetter.ToString());
+                if (listing.Item1)
+                    try
+                    {
+                        result.Add(new Token(bindings[listing.Item2], listing.Item2));
+                        foreach (char c in listing.Item2)
+                            readChar();
+                    }
+                    catch
+                    {
+                        //Something needs to be done about this hack
+                    }
+                if (char.IsLetterOrDigit((char)peekChar()))
                     result.Add(scanData());
                 else if (bindings.ContainsKey(peekLetter.ToString()))
                     result.Add(new Token(bindings[peekLetter.ToString()], readLetter.ToString()));
@@ -58,9 +70,9 @@ namespace LexerBuilder.LexerBuilder
             return result;
         }
 
-        public void SetBinding(string to, TokenType with)
+        public void SetBinding(string letter, TokenType with)
         {
-            bindings.Add(to, with);
+            bindings.Add(letter, with);
         }
 
         public void ScanFrom(string from, string to, TokenType tokenType)
@@ -112,7 +124,7 @@ namespace LexerBuilder.LexerBuilder
 
         private void whiteSpace()
         {
-            while (char.IsLetterOrDigit((char)peekChar()))
+            while (char.IsWhiteSpace((char)peekChar()))
                 readChar();
         }
 
@@ -128,6 +140,29 @@ namespace LexerBuilder.LexerBuilder
             if (position < code.Length)
                 return code[position++];
             return -1;
+        }
+
+        private Tuple<bool, string> contains(Dictionary<string, TokenType> dictionary, string letter)
+        {
+            string word = "";
+            bool isPresent = true;
+            foreach (KeyValuePair<string, TokenType> entry in dictionary)
+                if (entry.Key.StartsWith(letter))
+                {
+                    for (int x = 0; x < entry.Key.Length; x++)
+                        if (!(((char)peekChar(x)).ToString() == entry.Key[x].ToString()))
+                        {
+                            isPresent = false;
+                        }
+                    if (isPresent)
+                    {
+                        word = entry.Key;
+                        break;
+                    }
+                    else
+                        isPresent = true;
+                }
+            return Tuple.Create(isPresent, word);
         }
     }
 }
