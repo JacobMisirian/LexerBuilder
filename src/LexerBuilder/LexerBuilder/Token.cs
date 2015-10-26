@@ -30,7 +30,20 @@ namespace LexerBuilder.LexerBuilder
         Dot,
         Lambda,
         Assignment,
-        Exception
+        Exception,
+        Addition,
+        Subtraction,
+        Multiplication,
+        Division,
+        Modulus,
+        And,
+        Or,
+        Xor,
+        If,
+        Else,
+        Then,
+        Label,
+        Goto
     }
     public class Token
     {
