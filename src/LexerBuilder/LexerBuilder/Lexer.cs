@@ -75,6 +75,12 @@ namespace LexerBuilder.LexerBuilder
             bindings.Add(letter, with);
         }
 
+        public void GroupBind(string letters, TokenType with)
+        {
+            foreach (char l in letters)
+                bindings.Add(l.ToString(), with);
+        }
+
         public void ScanFrom(string from, string to, TokenType tokenType)
         {
             scanFrom.Add(from, Tuple.Create(to, tokenType));

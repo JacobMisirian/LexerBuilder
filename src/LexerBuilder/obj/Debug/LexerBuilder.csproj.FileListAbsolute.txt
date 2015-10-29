@@ -10,3 +10,11 @@ C:\Users\Reagan\Documents\Visual Studio 2015\Projects\LexerBuilder\src\LexerBuil
 C:\Users\Reagan\Documents\Visual Studio 2015\Projects\LexerBuilder\src\LexerBuilder\obj\Debug\LexerBuilder.csprojResolveAssemblyReference.cache
 C:\Users\Reagan\Documents\Visual Studio 2015\Projects\LexerBuilder\src\LexerBuilder\bin\Debug\LexerBuilder.exe
 C:\Users\Reagan\Documents\Visual Studio 2015\Projects\LexerBuilder\src\LexerBuilder\bin\Debug\LexerBuilder.pdb
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\bin\Debug\LexerBuilder.exe.config
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\obj\Debug\LexerBuilder.exe
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\obj\Debug\LexerBuilder.pdb
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\bin\Debug\LexerBuilder.exe
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\bin\Debug\LexerBuilder.pdb
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\bin\Debug\System.Net.Http.dll
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\bin\Debug\System.Net.Http.xml
+C:\Users\misiriaj\LexerBuilder\src\LexerBuilder\obj\Debug\LexerBuilder.csprojResolveAssemblyReference.cache

@@ -11,13 +11,14 @@ namespace LexerBuilder
     {
         static void Main(string[] args)
         {
-            string code = "println(\"Hello, World!\");++";
+            string code = "println(\"Hello, World!\");+++";
             Lexer myLexer = new Lexer();
 
             myLexer.SetBinding(";", TokenType.SemiColon);
             myLexer.SetBinding("(", TokenType.RightParentheses);
             myLexer.SetBinding(")", TokenType.LeftParentheses);
             myLexer.SetBinding("++", TokenType.Increment);
+            myLexer.GroupBind("+-*/", TokenType.Operation);
             myLexer.ScanFrom("\"", "\"", TokenType.String);
 
             foreach (Token token in myLexer.Scan(code))
