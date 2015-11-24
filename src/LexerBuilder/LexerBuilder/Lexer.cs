@@ -26,6 +26,14 @@ namespace LexerBuilder.LexerBuilder
         {
         }
 
+        public Lexer(LexerConfiguration configuration)
+        {
+            bindings = configuration.BindingsDictionary;
+            scanFrom = configuration.ScanFromDictionary;
+            ignoreChar = configuration.IgnoreCharDictionary;
+            ignoreFrom = configuration.IgnoreFromDictionary;
+        }
+
         public List<Token> Scan(string code)
         {
             this.code = code;
@@ -169,6 +177,17 @@ namespace LexerBuilder.LexerBuilder
                         isPresent = true;
                 }
             return Tuple.Create(isPresent, word);
+        }
+
+        public LexerConfiguration ToConfiguration()
+        {
+            LexerConfiguration ret = new LexerConfiguration();
+            ret.ScanFromDictionary = scanFrom;
+            ret.IgnoreFromDictionary = ignoreFrom;
+            ret.BindingsDictionary = bindings;
+            ret.IgnoreCharDictionary = ignoreChar;
+
+            return ret;
         }
     }
 }

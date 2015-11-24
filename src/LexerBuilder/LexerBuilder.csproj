@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LexerBuilder\Lexer.cs" />
+    <Compile Include="LexerBuilder\LexerConfiguration.cs" />
     <Compile Include="LexerBuilder\Token.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
